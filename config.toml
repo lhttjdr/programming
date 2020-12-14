@@ -1,0 +1,51 @@
+baseURL = "https://example.com"
+
+languageCode = "zh-cn"
+DefaultContentLanguage = "zh"
+title = "编程语言笔记"
+theme = "cherrysky"
+pygmentsCodeFences = true
+pygmentsStyle = "monokailight"
+
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+
+# Enable Google Analytics by entering your tracking id
+googleAnalytics = ""
+
+[params]
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableSearch = false # default is false
+disableReadmoreNav = true # set true to hide prev/next navigation, default is false
+highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+menushortcutsnewtab = true # set true to open shortcuts links to a new tab/window
+mathjaxStyle = "mathjax-style.css"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+
+[outputs]
+home = [ "HTML", "JSON"]
+
+[[menu.shortcuts]]
+name = "More from us"
+url = "https://vantage-design.com"
+weight = 1
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-github'></i>"
+url = "https://github.com/vantagedesign/ace-documentation"
+weight = 2
+
+[[menu.shortcuts]]
+name = "<button class='btn btn-success mt-n1'>Download</button>"
+url = "https://github.com/vantagedesign/ace-documentation/releases"
+weight = 3
